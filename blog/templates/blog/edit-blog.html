@@ -1,0 +1,19 @@
+<!DOCTYPE html>
+<html>
+
+<head>
+    <title></title>
+</head>
+
+<body>
+
+    <form action="{{ blog_id }}" method="post">
+
+        {{form}} {%csrf_token%}
+        <button class="btn btn-success text-right" type="submit">Edit</button>
+
+    </form>
+
+</body>
+
+</html>

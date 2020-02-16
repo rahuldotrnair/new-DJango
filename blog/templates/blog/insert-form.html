@@ -1,0 +1,113 @@
+<!DOCTYPE html>
+<html>
+
+<head>
+    <title>Blog|Add Products</title>
+    <link href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/css/bootstrap.min.css" rel="stylesheet" integrity="sha384-BVYiiSIFeK1dGmJRAkycuHAHRg32OmUcww7on3RYdg4Va+PmSTsz/K68vbdEjh4u" crossorigin="anonymous">
+    <style>
+        ul {
+            list-style-type: none;
+            margin: 0;
+            padding: 0;
+            overflow: hidden;
+            background-color: #333;
+        }
+        
+        li {
+            float: left;
+            border-right: 1px solid #bbb;
+        }
+        
+        li:last-child {
+            border-right: none;
+        }
+        
+        li a {
+            display: block;
+            color: white;
+            text-align: center;
+            padding: 14px 16px;
+            text-decoration: none;
+        }
+        
+        li a:hover:not(.active) {
+            background: rgb(121, 97, 247);
+            background: linear-gradient(45deg, rgba(121, 97, 247, 1) 0%, rgba(84, 56, 231, 1) 31%, rgba(135, 91, 181, 1) 47%, rgba(239, 101, 101, 1) 100%);
+            background-repeat: no-repeat;
+        }
+        
+        .active {
+            background-color: rgb(49, 31, 211);
+        }
+        
+        ul {
+            list-style-type: none;
+            margin: 0;
+            padding: 0;
+            overflow: hidden;
+            background-color: #333;
+        }
+        
+        li {
+            float: left;
+            border-right: 1px solid #bbb;
+        }
+        
+        li:last-child {
+            border-right: none;
+        }
+        
+        li a {
+            display: block;
+            color: white;
+            text-align: center;
+            padding: 14px 16px;
+            text-decoration: none;
+        }
+        
+        li a:hover:not(.active) {
+            background-color: #111;
+        }
+        
+        .active {
+            background: rgb(121, 97, 247);
+            background: linear-gradient(45deg, rgba(121, 97, 247, 1) 0%, rgba(84, 56, 231, 1) 31%, rgba(135, 91, 181, 1) 47%, rgba(239, 101, 101, 1) 100%);
+            background-repeat: no-repeat;
+        }
+    </style>
+
+
+    <script>
+        $(document).ready(function() {
+            $("#request-btn").click(function() {
+                alert("The paragraph was clicked.");
+            });
+        });
+    </script>
+    <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.4.1/jquery.min.js"></script>
+</head>
+
+<body>
+    <ul>
+        <li><a class="active" href="/blog">Home</a></li>
+        <li><a href="#">Insert Products</a></li>
+        <li><a href="show-blog">Show Products</a></li>
+        <li style="float:right"><a href="#about">About</a></li>
+    </ul>
+    <div class="container" style="padding-left: 300px;">
+
+        <h1 style="padding-left: 185px; padding-top: 100px;">ADD PRODUTS</h1>
+        <div style="width:80%; padding-top: 10%;">
+            <form action="" method="POST">
+                {{ form }} {%csrf_token%}
+
+                <br><br><br><br> <button type="submit" class="btn btn-primary btn-md" id="request-btn" style="margin-left: 200px;width:30%;">Add</button>
+
+        </div>
+        </form>
+    </div>
+</body>
+
+
+
+</html>

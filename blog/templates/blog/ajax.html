@@ -1,0 +1,40 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <title>Document</title>
+</head>
+
+<body>
+
+    <button id="request-btn">Click to get response</button>
+    <div id=response></div>
+
+    <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.3.1/jquery.min.js"></script>
+
+    <script type="text/javascript">
+        $(document).ready(function() {
+            $("#request-btn").click(function() {
+                $.ajax({
+                    url: "/blog/signup",
+                    type: "GET",
+                    dataType: "json",
+                    success: function(result) {
+
+                        $.each(result, function() {
+                            html = "Name:" + this.name + "<br>" + "tagline:" + this.tagline + "<hr>"
+                            $("#response").append(html)
+                        });
+                    }
+                });
+            });
+        });
+    </script>
+
+
+</body>
+
+</html>
